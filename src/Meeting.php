@@ -1,5 +1,5 @@
 <?php
-namespace mtgofa\Bigbluebutton;
+namespace barsmedia\Bigbluebutton;
 
 use Illuminate\Support\Facades\Facade;
 
