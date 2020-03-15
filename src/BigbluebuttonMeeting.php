@@ -1,7 +1,7 @@
 <?php
-namespace mtgofa\Bigbluebutton;
+namespace barsmedia\Bigbluebutton;
 
-use mtgofa\Bigbluebutton\Contracts\Meeting;
+use barsmedia\Bigbluebutton\Contracts\Meeting;
 use BigBlueButton\BigBlueButton;
 use BigBlueButton\Parameters\CreateMeetingParameters;
 use BigBlueButton\Parameters\EndMeetingParameters;
