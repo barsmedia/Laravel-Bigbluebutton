@@ -3,23 +3,23 @@
 This is a laravel wrapper for BigBlueButton API
 ## Requirements
 
-- Laravel 6.6 or above.
+- Laravel 7 or above.
 
 ## Installation
 
 Require package in your composer.json and update composer.  This downloads the package and the official bigbluebutton php library. 
 
 ```
-composer require mtgofa/bigbluebutton
+composer require barsmedia/bigbluebutton
 ```
 
 After updating composer, add the ServiceProvider to the providers array in config/app.php
 ```
- mtgofa\Bigbluebutton\BigbluebuttonProviderService::class,
+ barsmedia\Bigbluebutton\BigbluebuttonProviderService::class,
 ```
 You can optionally use the facade for shorter code. Add this to your facades:
 ```
-'Meeting' => mtgofa\Bigbluebutton\BigbluebuttonMeeting::class,
+'Meeting' => barsmedia\Bigbluebutton\BigbluebuttonMeeting::class,
 ```
 
 ## Usage
@@ -45,7 +45,7 @@ namespace App\Http\Controllers;
 class MeetingController extends Controller
 {
     /**
-     * @var \mtgofa\Bigbluebutton\Contracts\Meeting
+     * @var \barsmedia\Bigbluebutton\Contracts\Meeting
      */
     protected $meeting;
 
@@ -68,14 +68,14 @@ class MeetingController extends Controller
 ```
 **Create meeting**
 ```php
-use mtgofa\Bigbluebutton\Contracts\Meeting;
+use barsmedia\Bigbluebutton\Contracts\Meeting;
 use BigBlueButton\Parameters\CreateMeetingParameters;
 use Illuminate\Http\Request;
 
 class MeetingController extends Controller
 {
     /**
-     * @var \mtgofa\Bigbluebutton\Contracts\Meeting
+     * @var \barsmedia\Bigbluebutton\Contracts\Meeting
      */
     protected $meeting;
 
@@ -104,14 +104,14 @@ class MeetingController extends Controller
 ```
 **Join a meeting**
 ```php
-use mtgofa\Bigbluebutton\Contracts\Meeting;
+use barsmedia\Bigbluebutton\Contracts\Meeting;
 use BigBlueButton\Parameters\JoinMeetingParameters;
 use Illuminate\Http\Request;
 
 class MeetingController extends Controller
 {
     /**
-     * @var \mtgofa\Bigbluebutton\Contracts\Meeting
+     * @var \barsmedia\Bigbluebutton\Contracts\Meeting
      */
     protected $meeting;
 
@@ -140,14 +140,14 @@ class MeetingController extends Controller
 **Close meeting**
 ```php
 
-use mtgofa\Bigbluebutton\Contracts\Meeting;
+use barsmedia\Bigbluebutton\Contracts\Meeting;
 use BigBlueButton\Parameters\EndMeetingParameters;
 use Illuminate\Http\Request;
 
 class MeetingController extends Controller
 {
     /**
-     * @var \mtgofa\Bigbluebutton\Contracts\Meeting
+     * @var \barsmedia\Bigbluebutton\Contracts\Meeting
      */
     protected $meeting;
 
