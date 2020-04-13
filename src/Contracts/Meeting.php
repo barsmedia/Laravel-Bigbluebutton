@@ -54,4 +54,11 @@ interface Meeting
      * @return mixed
      */
     public function getRecording(GetRecordingsParameters $recording);
+    
+    /**
+     *
+     * @param \BigBlueButton\Parameters\DeleteRecordingsParameters $recording
+     * @return mixed
+     */
+    public function deleteRecording(DeleteRecordingsParameters $recording);
 }
