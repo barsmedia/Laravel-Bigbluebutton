@@ -103,4 +103,20 @@ class BigbluebuttonMeeting implements Meeting
 
         return false;
     }
+    
+    /**
+     *
+     * @param \BigBlueButton\Parameters\DeleteRecordingsParameters $recording
+     * @return mixed
+     */
+    public function deleteRecording(DeleteRecordingsParameters $recording)
+    {
+        $response = $this->bbb->deleteRecordings($recording);
+
+        if ($response->getReturnCode() == 'SUCCESS') {
+            return $response->getRawXml()->deleted;
+        }
+
+        return false;
+    }
 }
