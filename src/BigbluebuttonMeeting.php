@@ -30,7 +30,7 @@ class BigbluebuttonMeeting implements Meeting
     {
         $response = $this->bbb->getMeetings();
         if ($response->getReturnCode() == 'SUCCESS') {
-            return $response->getRawXml()->meetings->meeting;
+            return $response->getRawXml()->meetings;
         }
 
         return false;
@@ -98,7 +98,7 @@ class BigbluebuttonMeeting implements Meeting
         $response = $this->bbb->getRecordings($recording);
 
         if ($response->getReturnCode() == 'SUCCESS') {
-            return $response->getRawXml()->recordings->recording;
+            return $response->getRawXml()->recordings;
         }
 
         return false;
