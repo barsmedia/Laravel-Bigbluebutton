@@ -3,7 +3,7 @@
 This is a laravel wrapper for BigBlueButton API
 ## Requirements
 
-- Laravel 7 or above.
+- Laravel 6 or above.
 
 ## Installation
 
